@@ -1,0 +1,11 @@
+#use an existing docker image as a base
+FROM node:alpine
+
+#set the working directory
+WORKDIR /usr/app
+
+#copy the rest of the files
+COPY ./ ./
+
+#default command
+CMD ["node", "index.js"]
